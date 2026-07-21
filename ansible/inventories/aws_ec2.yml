@@ -1,0 +1,18 @@
+plugin: amazon.aws.aws_ec2
+
+regions:
+ - us-west-2
+
+filters:
+  tag:AnsibleManaged: "true"
+  instance-state-name: running   
+
+keyed_groups:
+   - key: tag.Role
+     prefix: role 
+
+   - key: tags.Environment
+     prefix: env   
+
+hostnames:
+  - tag:Name     
