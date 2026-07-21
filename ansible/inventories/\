@@ -99,8 +99,9 @@ filters:
 hostnames:
   - tag:Name
 
+
 compose:
-  ansible_host: instance_id
+  ansible_host: instance_id  
 # =============================================================================
 # Q: What does keyed_groups do?
 #
@@ -132,10 +133,10 @@ compose:
 # =============================================================================
 
 keyed_groups:
-  - key: ec2_tags.Role
+  - key: tags.Role
     prefix: role
 
-  - key: ec2_tags.Environment
+  - key: tags.Environment
     prefix: env
 
 # =============================================================================
