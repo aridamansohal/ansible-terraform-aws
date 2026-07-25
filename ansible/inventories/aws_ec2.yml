@@ -101,6 +101,7 @@ hostnames:
 
 compose:
   ansible_host: instance_id
+  
 # =============================================================================
 # Q: What does keyed_groups do?
 #
